@@ -56,7 +56,7 @@ export default function CrmLoginPage() {
               autoComplete="username"
               required
               disabled={loading}
-              placeholder="admin"
+              placeholder="Enter username"
             />
           </label>
           <label>

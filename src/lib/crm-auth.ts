@@ -13,7 +13,7 @@ export async function getCrmSession() {
 
   try {
     const { payload } = await jwtVerify(token, getSecret());
-    return payload.sub === "crm-admin" && payload.role === "admin" ? payload : null;
+    return payload.sub === "crm_session" && payload.role === "crm_operator" ? payload : null;
   } catch {
     return null;
   }

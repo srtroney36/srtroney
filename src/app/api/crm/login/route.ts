@@ -13,7 +13,7 @@ export async function POST(request: Request) {
 
   if (!valid) return NextResponse.json({ error: "Invalid credentials." }, { status: 401 });
 
-  const token = await new SignJWT({ role: "admin" }).setProtectedHeader({ alg: "HS256" }).setSubject("crm-admin").setIssuedAt().setExpirationTime("7d").sign(getSecret());
+  const token = await new SignJWT({ role: "crm_operator" }).setProtectedHeader({ alg: "HS256" }).setSubject("crm_session").setIssuedAt().setExpirationTime("7d").sign(getSecret());
   const response = NextResponse.json({ ok: true });
   response.cookies.set("crm_session", token, { httpOnly: true, secure: process.env.NODE_ENV === "production", sameSite: "lax", path: "/", maxAge: 60 * 60 * 24 * 7 });
   return response;

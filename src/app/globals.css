@@ -239,8 +239,8 @@ a { color: inherit; text-decoration: none; }
 .contact-alt-link { margin-top: 32px; font: 12px monospace; color: #572212; }
 .contact-direct-link { color: #150a04; font-weight: 700; text-decoration: underline; }
 .site-footer-links { display: flex; align-items: center; gap: 20px; }
-.footer-admin-link { color: var(--muted); transition: color 0.2s; }
-.footer-admin-link:hover { color: var(--acid); }
+.footer-crm-link { color: var(--muted); transition: color 0.2s; }
+.footer-crm-link:hover { color: var(--acid); }
 
 .crm-auth-page { min-height: 100vh; display: grid; place-items: center; padding: 24px; background: radial-gradient(circle at 70% 20%, rgba(255,107,53,.12), transparent 35%), var(--background); }
 .crm-auth-panel { width: min(440px, 100%); padding: 42px 0; }

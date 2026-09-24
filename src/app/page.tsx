@@ -36,7 +36,7 @@ export default function Home() {
         <span>© 2026 SRT RONEY</span>
         <span>Built in public, one useful iteration at a time.</span>
         <div className="site-footer-links">
-          <Link href="/crm" className="footer-admin-link">CRM ↗</Link>
+          <Link href="/crm" className="footer-crm-link">CRM ↗</Link>
           <a href="#top">Back to top ↑</a>
         </div>
       </footer>

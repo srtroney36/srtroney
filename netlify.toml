@@ -1,0 +1,6 @@
+[build]
+  command = "prisma generate && npm run build"
+  publish = ".next"
+
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "CRM_ADMIN_USERNAME,AUTH_SECRET"
