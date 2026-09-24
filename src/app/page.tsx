@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import ContactForm from "./components/contact-form";
 
 export default function Home() {
   return (
@@ -19,27 +18,9 @@ export default function Home() {
       <section id="community" className="community-section"><div><p className="eyebrow">03A / Community log</p><h2>What are you trying?</h2><p>Tell me what you are building, testing, or stuck on. The best future field notes usually start as someone else&apos;s sharp question.</p></div><div className="community-notes"><article><span>@siam_dev / 2 days ago</span><p>Testing a local food box service. Restaurant partnerships are the bottleneck.</p></article><article><span>Afsana K. / 4 days ago</span><p>Lowering the price did not increase jewelry sales. Perceived quality dropped instead.</p></article><a className="button button-primary" href="#contact">Leave a note <span>↗</span></a></div></section>
       <section id="talent" className="talent-section"><div><p className="eyebrow">05 / Talent acquisition</p><h2>Your talent, matched to meaningful work.</h2><p>I am building a trusted network of designers, developers, editors, strategists, and operators who want the right projects. Share your craft with me and I will match you with client work where your skills can make a real difference.</p></div><div className="talent-panel"><span>OPEN NETWORK / CURATED MATCHING</span><strong>Are you talented and looking for the right project?</strong><Link className="button button-primary" href="/talent">Join the talent network <span>↗</span></Link></div></section>
       <section id="collaborate" className="collaborate-section"><div><p className="eyebrow">06 / Client collaboration</p><h2>Find the right people for the right experiment.</h2><p>Have a project that needs more than one discipline? Tell me what you are trying to make, fix, or test. I will shape the right small team from the network around the problem.</p></div><div className="collaborate-flow"><div><span>01</span><strong>Understand the problem</strong><p>We clarify the outcome, constraints, and kind of help you actually need.</p></div><div><span>02</span><strong>Assemble the team</strong><p>I match the experiment with the right combination of specialist skills.</p></div><div><span>03</span><strong>Run the work</strong><p>You get one clear point of contact and a team built around progress.</p></div><Link className="button button-primary" href="/collaborate">Propose an experiment <span>↗</span></Link></div></section>
-      <section id="contact" className="contact-section">
-        <div className="contact-header-block">
-          <p className="eyebrow">04 / Contact</p>
-          <h2>Have a real problem worth testing?</h2>
-          <p>Tell me what is stuck. I will come back with a useful first question.</p>
-        </div>
-        <ContactForm />
-        <div className="contact-alt-link">
-          <span>Prefer direct email? </span>
-          <a className="contact-direct-link" href="mailto:hello@srtroney.com?subject=Project%20proposal">hello@srtroney.com <span>↗</span></a>
-        </div>
-      </section>
+      <section id="contact" className="contact-section"><p className="eyebrow">04 / Contact</p><h2>Have a real problem worth testing?</h2><p>Tell me what is stuck. I will come back with a useful first question.</p><a className="button button-light" href="mailto:hello@srtroney.com?subject=Project%20proposal">hello@srtroney.com <span>↗</span></a></section>
       <section id="integrity" className="integrity-section"><p className="eyebrow">04 / Integrity check</p><h2>I don&apos;t want to be a guru.</h2><p className="integrity-lead">I&apos;m not here to lecture you on &quot;How to scale to 7-figures while sleeping.&quot; I haven&apos;t done that. I have real digital skills: I shoot high-grade video, craft conversion landing pages, configure marketing pipelines, and write software. <strong>Yet, skills alone don&apos;t automatically form a profitable business.</strong></p><div className="integrity-grid"><article><h3>No fake screenshots</h3><p>Inspect element inspects nothing. What you see here is backed by real work, bank slips, and ledger lines.</p></article><article><h3>No overnight myths</h3><p>No &quot;I did this one weird trick in 48 hours&quot; stories. Just compound iterations.</p></article><article><h3>No fabricated wins</h3><p>Every failed pitch, dead campaign, and lost investment is listed honestly.</p></article><article className="integrity-real"><h3>Just real outcomes</h3><p>Hypothesis → Action → Outcome → Permanent public lesson.</p></article></div></section>
-      <footer className="site-footer">
-        <span>© 2026 SRT RONEY</span>
-        <span>Built in public, one useful iteration at a time.</span>
-        <div className="site-footer-links">
-          <Link href="/crm" className="footer-crm-link">CRM ↗</Link>
-          <a href="#top">Back to top ↑</a>
-        </div>
-      </footer>
+      <footer className="site-footer"><span>© 2026 SRT RONEY</span><span>Built in public, one useful iteration at a time.</span><a href="#top">Back to top ↑</a></footer>
     </main>
   );
 }
