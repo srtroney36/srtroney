@@ -5,45 +5,74 @@ export default function Home() {
   return (
     <main className="site-shell">
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="srt roney home">
-          <Image src="/FAVICON-01.svg" alt="" width={34} height={34} priority />
+        <Link className="brand" href="/" aria-label="srt roney home">
+          <span className="brand-badge">
+            <Image src="/FAVICON-BLACK.svg" alt="" width={34} height={34} priority />
+          </span>
           <span>srt roney</span>
-        </a>
+        </Link>
         <nav className="site-nav" aria-label="Primary navigation">
-          <a href="#how-i-work">How I work</a>
-          <a href="#work">Work</a>
-          <a href="#ground-truth">Ground truth</a>
-          <a href="#lab">The lab</a>
-          <a href="#about">About</a>
-          <a className="nav-cta" href="#contact">Bring me a problem</a>
+          <Link href="/about">About</Link>
         </nav>
       </header>
 
       {/* 1. HERO */}
       <section id="top" className="hero-section">
-        <div className="eyebrow"><span className="live-dot" /> Independent builder / Savar, Bangladesh / 2026</div>
-        <div className="hero-grid">
-          <div className="hero-copy-column">
-            <p className="hero-intro">Hi, I&apos;m <span>SRT Roney.</span></p>
-            <h1>I investigate real problems, test solutions, and build what works.</h1>
-            <p className="hero-copy">
-              I build the useful parts of ambitious ideas. Working across technology, automation, marketing, creative, psychology, and digital systems—sometimes I build the solution myself, sometimes I assemble the right specialists.
-            </p>
-            <div className="hero-actions">
-              <a className="button button-primary" href="#contact">Bring me a problem <span>↗</span></a>
-              <a className="text-link" href="#work">Explore the work <span>↓</span></a>
+        <div className="hero-container">
+          <h1 className="hero-first-line">
+            I tested and <span className="hero-text-fade">failed at</span>{" "}
+            <span className="hero-text-fail-stat">99%</span> of digital strategies.
+          </h1>
+
+          <div className="hero-visual-stage">
+            <div className="hero-glow" aria-hidden="true" />
+
+            <div className="hero-portrait-frame">
+              <Image
+                className="hero-portrait"
+                src="/srt roney hero image.png"
+                alt="SRT Roney"
+                width={1122}
+                height={1402}
+                priority
+              />
+              <Image
+                className="hero-portrait-blur"
+                src="/srt roney hero image.png"
+                alt=""
+                width={1122}
+                height={1402}
+                aria-hidden="true"
+                priority
+              />
+
+              {/* Glass container matching exact width of the photo */}
+              <div className="hero-photo-glass">
+                <p className="hero-glass-text">
+                  Trying to document<br />
+                  <span className="hero-text-highlight">the 1% that survives.</span>
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="hero-visual">
-            <Image className="hero-portrait" src="/SRT RONEY IMAGE.webp" alt="SRT Roney at work" width={1200} height={1600} priority />
-            <span className="portrait-stamp">SRT / BUILDER<br />FIELD PORTRAIT 001</span>
-            <aside className="lab-note">
-              <div className="note-topline"><span>FIELD NOTE 001</span><span>ACTIVE</span></div>
-              <p className="note-label">How I operate</p>
-              <p className="note-title">The best work starts where the brief gets uncomfortable.</p>
-              <p className="note-body">I don&apos;t start with a service checklist. I isolate the bottleneck keeping a business stuck, test the hypothesis, and build what actually works.</p>
-              <div className="note-footer"><span>Last updated</span><strong>24 SEP 2026</strong></div>
-            </aside>
+
+            <div className="hero-actions">
+              <a className="button button-primary" href="#contact">
+                Bring me a problem <span>↗</span>
+              </a>
+              <a
+                className="button button-secondary button-hero-youtube"
+                href="https://youtube.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>Watch me on youtube</span>
+                <span className="youtube-play-glow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </section>

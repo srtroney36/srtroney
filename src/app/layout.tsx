@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ScrollBlur } from "./scroll-blur";
+import { SmoothScroll } from "./smooth-scroll";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://srtroney.com"),
@@ -19,7 +21,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        <SmoothScroll />
+        <ScrollBlur />
+        {children}
+      </body>
     </html>
   );
 }
