@@ -4492,12 +4492,27 @@ h2 {
 	);
 }
 
+/* Visible states */
 html.has-scrolled .viewport-blur-top,
-html.has-scrolled .viewport-blur-bottom,
-.viewport-blur-top.is-scrolled,
-.viewport-blur-bottom.is-scrolled {
+.viewport-blur-top.is-scrolled {
 	opacity: 1;
 	visibility: visible;
+}
+
+html.has-scrolled:not(.at-footer) .viewport-blur-bottom:not(.at-footer) {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Hidden states (Hero at top and Footer at bottom) */
+html:not(.has-scrolled) .viewport-blur-top,
+html:not(.has-scrolled) .viewport-blur-bottom,
+html.at-footer .viewport-blur-bottom,
+.viewport-blur-bottom.at-footer,
+.viewport-blur-bottom:not(.is-scrolled) {
+	opacity: 0 !important;
+	visibility: hidden !important;
+	pointer-events: none !important;
 }
 
 /* ==========================================================================

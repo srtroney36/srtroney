@@ -18,6 +18,7 @@ export function SmoothScroll() {
     });
 
     (window as unknown as { lenis?: Lenis }).lenis = lenis;
+    window.dispatchEvent(new CustomEvent("lenis:ready", { detail: lenis }));
 
     return () => {
       delete (window as unknown as { lenis?: Lenis }).lenis;
