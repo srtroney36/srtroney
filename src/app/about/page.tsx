@@ -1,385 +1,223 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import { AboutAnimations } from "./animations";
 
 export const metadata: Metadata = {
-  title: "About SRT Roney | Multidisciplinary Hybrid Operator",
+  title: "About SRT Roney | An Autobiography",
   description:
-    "Shohanur Rahman Talukder Roney (SRT Roney) is a multidisciplinary hybrid operator working across cinema visuals, full-stack software, automation pipelines, and consumer psychology.",
+    "Shohanur Rahman Talukder Roney (SRT Roney) — An autodidact's autobiography on starting from zero in Savar, tearing down hardware, mastering cinema and code, and documenting what survives.",
 };
-
-const chapters = [
-  {
-    period: "PRE-2022",
-    chapter: "CHAPTER 00",
-    title: "Before Zero: The Autodidact Spark",
-    description:
-      "A curiosity-driven autodidact phase in Savar. Dissecting computer hardware, pulling apart server configurations, ripping open templates, and learning how the internet was physically and logically wired together.",
-    takeaway: "Core literacy acquired, but zero commercial direction.",
-    isCurrent: false,
-  },
-  {
-    period: "2022 — 2023",
-    chapter: "CHAPTER 01",
-    title: "The Creative Years: Light & Cinema",
-    description:
-      "Thousands of hours behind cinema cameras, studio lighting, lens physics, and precision color grading in DaVinci Resolve Studio. Obsessed with visual storytelling, framing, and commercial product aesthetics.",
-    takeaway: "Aesthetic taste developed, but learned that 'great art' without distribution yields zero revenue.",
-    isCurrent: false,
-  },
-  {
-    period: "2023 — 2024",
-    chapter: "CHAPTER 02",
-    title: "The System Builder: Modern Web & Automation",
-    description:
-      "Diving deep into modern web engineering—TypeScript, Next.js, headless architectures, SQL databases, API pipelines, and automation tools. Building software from raw requirements to deployment.",
-    takeaway: "Technical ability became razor-sharp, but code in a ghost town without an audience solves nothing.",
-    isCurrent: false,
-  },
-  {
-    period: "2024 — 2025",
-    chapter: "CHAPTER 03",
-    title: "The Marketer: Behavioral Psychology & Ads",
-    description:
-      "Performance marketing, Meta ads management, search indexing, consumer behavioral psychology, conversion rate optimization, and direct-response copywriting.",
-    takeaway: "Understood how attention flows, but isolated marketing disconnected from product delivery burns cash.",
-    isCurrent: false,
-  },
-  {
-    period: "2026 — PRESENT",
-    chapter: "CHAPTER 04",
-    title: "The Hybrid Synthesis: The Honest Lab",
-    description:
-      "Starting again with total synthesis. Disjointed disciplines are not a business—they are siloed weapons. Now uniting cinema visuals, code, automation, and psychology into one single repeatable problem-solving method.",
-    takeaway: "Documenting in broad daylight. Testing the 99% of failures to isolate the 1% that survives.",
-    isCurrent: true,
-  },
-];
-
-const principles = [
-  {
-    index: "01",
-    title: "Radical Candor",
-    description:
-      "No guru theatre. I document what broke with the exact same rigor as what succeeded. If an experiment collapses, the transparent autopsy leaves behind a better map for everyone.",
-  },
-  {
-    index: "02",
-    title: "End-to-End Velocity",
-    description:
-      "Real problems don't respect department boundaries. A single hybrid operator who commands the camera, the code editor, and the conversion funnel executes without 8-week cross-department meetings.",
-  },
-  {
-    index: "03",
-    title: "The 1% Survival Filter",
-    description:
-      "99% of digital advice, growth hacks, and template formulas are fleeting noise. We run live-fire experiments to identify the 1% of durable levers that consistently generate leverage.",
-  },
-  {
-    index: "04",
-    title: "Fast Feedback Loops",
-    description:
-      "A hypothesis that takes six months to validate is dead on arrival. Prototype in 48 hours, deploy to real people, and let objective telemetry decide the next iteration.",
-  },
-  {
-    index: "05",
-    title: "Relentless Craftsmanship",
-    description:
-      "Speed is never an excuse for fragile architecture or ugly aesthetics. Fast and beautiful are not mutually exclusive—clean code and cinematic rhythm earn compounding trust.",
-  },
-  {
-    index: "06",
-    title: "Skin in the Game",
-    description:
-      "Theory is cheap. I don't give advice on systems I haven't personally deployed, broken, and repaired with my own hands in real production environments.",
-  },
-];
-
-const arsenal = [
-  {
-    category: "Visual & Cinema",
-    items: [
-      "Cinema Cameras",
-      "Prime Glass",
-      "DaVinci Resolve Studio",
-      "Studio Lighting Rigs",
-      "Figma",
-      "Color Science",
-    ],
-  },
-  {
-    category: "Software & Web",
-    items: [
-      "Next.js (App Router)",
-      "TypeScript",
-      "React",
-      "Node.js",
-      "PostgreSQL & Prisma",
-      "REST & GraphQL APIs",
-    ],
-  },
-  {
-    category: "Automation & Ops",
-    items: [
-      "Custom Headless CRM",
-      "Make.com / n8n",
-      "Webhook Pipelines",
-      "Docker Containers",
-      "Linux VPS",
-      "Cloudflare Edge",
-    ],
-  },
-  {
-    category: "Growth & Strategy",
-    items: [
-      "Consumer Psychology",
-      "Meta Ads Manager",
-      "CRO Testing",
-      "Funnel Architecture",
-      "Direct Copywriting",
-      "SEO Indexing",
-    ],
-  },
-];
 
 export default function AboutPage() {
   return (
-    <div className="about-page-shell">
-      {/* 1. SITE HEADER */}
-      <header className="site-header">
-        <Link className="brand" href="/" aria-label="srt roney home">
-          <span className="brand-badge">
-            <Image src="/FAVICON-BLACK.svg" alt="" width={34} height={34} priority />
-          </span>
+    <div className="autobio-shell">
+      <AboutAnimations />
+
+      {/* ── MINIMAL TOP BAR ── */}
+      <header className="autobio-nav anim-fade-in">
+        <Link className="autobio-brand" href="/" aria-label="Return home">
           <span>srt roney</span>
         </Link>
-        <nav className="site-nav" aria-label="Primary navigation">
-          <Link href="/about" className="active">About</Link>
-        </nav>
+        <div className="autobio-nav-meta">
+          <span className="autobio-folio-dot" aria-hidden="true" />
+          <span>AUTOBIOGRAPHY // 2026</span>
+        </div>
       </header>
 
-      {/* 2. MAIN ABOUT CONTENT */}
-      <main className="about-content-wrap">
-        {/* Top Control Bar */}
-        <div className="about-top-bar">
-          <Link className="about-back-link" href="/">
-            ← Return to journal
-          </Link>
-          <div className="about-status-tag">
-            <span className="pulse-dot" aria-hidden="true" />
-            <span>OPERATOR PROFILE // SAVAR, BD</span>
-          </div>
-        </div>
-
-        {/* Hero Dossier */}
-        <section className="about-hero">
-          <p className="about-eyebrow">DOSSIER // 01 · OPERATOR PROFILE</p>
-          <h1>The discipline to test, fail, and build what actually survives.</h1>
-          <p className="about-hero-lead">
-            I’m Shohanur Rahman Talukder Roney (SRT Roney)—a multidisciplinary hybrid operator.
-            I live in the messy intersection between cinema cameras, full-stack software, automated
-            workflows, and consumer psychology.
-          </p>
-
-          {/* Telemetry Data Grid */}
-          <div className="about-telemetry-grid">
-            <div className="telemetry-item">
-              <span className="telemetry-label">IDENTIFIER</span>
-              <span className="telemetry-value">Shohanur Rahman Talukder (SRT Roney)</span>
-            </div>
-            <div className="telemetry-item">
-              <span className="telemetry-label">BASE COORDINATES</span>
-              <span className="telemetry-value">Savar, Dhaka, Bangladesh (UTC+6)</span>
-            </div>
-            <div className="telemetry-item">
-              <span className="telemetry-label">CORE ARCHITECTURE</span>
-              <span className="telemetry-value">Creative × Code × Marketing Systems</span>
-            </div>
-            <div className="telemetry-item">
-              <span className="telemetry-label">OPERATING THESIS</span>
-              <span className="telemetry-value">Documenting the 1% that survives</span>
-            </div>
-          </div>
-        </section>
-
-        {/* Origin & Narrative Section */}
-        <section className="about-section-wrap">
-          <div className="about-story-grid">
-            {/* Left: Portrait Card */}
-            <div className="about-portrait-card">
-              <div className="about-portrait-inner">
-                <Image
-                  className="about-portrait-img"
-                  src="/srt roney hero image.png"
-                  alt="SRT Roney Portrait"
-                  width={1122}
-                  height={1402}
-                  priority
-                />
-                <div className="about-portrait-badge">
-                  <span>OPERATOR NO. 01</span>
-                  <span>SAVAR, BD // 2026</span>
-                </div>
-              </div>
+      {/* ── THE AUTOBIOGRAPHY ESSAY ── */}
+      <main className="autobio-canvas">
+        <article className="autobio-document">
+          {/* Header Folio */}
+          <header className="autobio-header anim-section">
+            <div className="autobio-kicker anim-slide-up">
+              <span>DOSSIER</span>
+              <span className="kicker-sep">/</span>
+              <span>SAVAR, BANGLADESH</span>
             </div>
 
-            {/* Right: The Real Story */}
-            <div className="about-story-content">
-              <div className="about-section-header">
-                <p className="about-eyebrow">01 / ORIGIN & REALITY</p>
-                <h2>Who the hell is Roney?</h2>
-              </div>
+            <h1 className="autobio-title anim-slide-up">
+              Who the hell <br />
+              <span className="autobio-gradient-title">is Roney?</span>
+            </h1>
 
-              <div className="about-story-text">
-                <p>
-                  I&apos;m an autodidact who got lost somewhere between cinema cameras, lines of code,
-                  consumer psychology, marketing campaigns, and the internet.
-                </p>
-                <p>
-                  I started in Savar with zero industry connections, zero venture backing, and zero
-                  shortcuts. My curriculum was tearing down hardware, reading open-source code at 3 AM,
-                  shooting thousands of lighting test frames, and building web apps that nobody asked for
-                  until I figured out how things actually click.
-                </p>
-
-                <div className="about-quote-box">
-                  “I haven&apos;t built a giant conglomerate yet. I&apos;m not rich, and I don&apos;t pretend
-                  to be. But I am relentlessly disciplined, technically capable, and willing to work in broad
-                  daylight.”
-                </div>
-
-                <p>
-                  Over the years, I saw the modern digital landscape fracture into dysfunctional silos:
-                  <strong> designers</strong> who make things that look gorgeous but convert terribly,
-                  <strong> engineers</strong> who write beautiful code for products that nobody ever finds,
-                  and <strong>marketers</strong> who sell pipe dreams because they cannot build or deliver
-                  the actual experience.
-                </p>
-                <p>
-                  I chose a different path: becoming a <strong>hybrid operator</strong>. Someone who can
-                  hold the camera, grade the footage, architect the Next.js database, hook up the automated
-                  pipeline, and write the direct-response copy that moves real human beings.
-                </p>
-                <p>
-                  <strong>This website is my scientific journal.</strong> I document the 99% of digital
-                  strategies that fail so we can double down on the 1% that endures.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Chronological Timeline Section */}
-        <section className="about-section-wrap">
-          <div className="about-section-header">
-            <p className="about-eyebrow">02 / CHRONOLOGICAL EVOLUTION</p>
-            <h2>How the toolkit was forged.</h2>
-            <p className="about-section-subtitle">
-              Not an autobiography of unearned victories—an honest log of disciplines accumulated
-              through live trial, error, and hard resets.
+            <p className="autobio-subtitle anim-slide-up">
+              Notes on starting from zero, failing in public, and building what actually survives.
             </p>
-          </div>
+          </header>
 
-          <div className="about-timeline-grid">
-            {chapters.map((item) => (
-              <article
-                key={item.chapter}
-                className={`timeline-card ${item.isCurrent ? "timeline-card-current" : ""}`}
-              >
-                <div className="timeline-meta">
-                  <span className="timeline-period">{item.period}</span>
-                  <span className="timeline-chapter">{item.chapter}</span>
-                </div>
-                <div className="timeline-body">
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                  <div className="timeline-takeaway">
-                    <span>Key Lesson:</span> {item.takeaway}
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        {/* Operating Principles */}
-        <section className="about-section-wrap">
-          <div className="about-section-header">
-            <p className="about-eyebrow">03 / OPERATING CODE</p>
-            <h2>How I make decisions.</h2>
-            <p className="about-section-subtitle">
-              Non-negotiable principles that govern how I run experiments, build software, and interact
-              with reality.
+          {/* Opening Lead Statement */}
+          <section className="autobio-lead-movement anim-section">
+            <p className="autobio-lead-text anim-slide-up">
+              I’m an autodidact who got lost somewhere between cinema cameras, lines of code,
+              consumer psychology, marketing campaigns, and the internet.
             </p>
-          </div>
+          </section>
 
-          <div className="principles-grid">
-            {principles.map((principle) => (
-              <div key={principle.index} className="principle-card">
-                <span className="principle-index">{principle.index} // PRINCIPLE</span>
-                <h3>{principle.title}</h3>
-                <p>{principle.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+          {/* Chapter I */}
+          <section className="autobio-chapter anim-section">
+            <div className="chapter-label anim-slide-up">
+              <span>CHAPTER 01</span>
+              <span className="chapter-label-line" aria-hidden="true" />
+              <span>THE CURRICULUM</span>
+            </div>
 
-        {/* Arsenal / Toolkit */}
-        <section className="about-section-wrap">
-          <div className="about-section-header">
-            <p className="about-eyebrow">04 / THE ARSENAL</p>
-            <h2>Weapons of choice.</h2>
-            <p className="about-section-subtitle">
-              Battle-tested hardware, frameworks, and workflows used to create cinematic media and
-              high-performance digital software.
-            </p>
-          </div>
+            <h2 className="chapter-heading anim-slide-up">
+              Zero connections. Zero venture backing. Zero shortcuts.
+            </h2>
 
-          <div className="arsenal-grid">
-            {arsenal.map((col) => (
-              <div key={col.category} className="arsenal-card">
-                <div className="arsenal-icon-title">
-                  <h3>{col.category}</h3>
+            <div className="chapter-prose anim-slide-up">
+              <p>
+                I started in Savar with nothing more than raw curiosity and an internet connection.
+                There was no playbook handed down, no mentor in the room, and no venture capital
+                to cushion mistakes.
+              </p>
+              <p>
+                My curriculum was tearing down computer hardware, reading open-source code at 3 AM,
+                shooting thousands of lighting test frames, and building web apps that nobody asked for
+                until I figured out how things actually click.
+              </p>
+              <p>
+                Most of those early years were defined by failure. Projects built that nobody visited.
+                Videos uploaded to dead algorithms. Lines of code committed to repositories that never saw
+                real production traffic. But every failed attempt left behind structured data.
+              </p>
+            </div>
+          </section>
+
+          {/* Keynote Monolith Quote */}
+          <section className="autobio-quote-break anim-section">
+            <blockquote className="autobio-pull-quote anim-slide-up">
+              &ldquo;I haven’t built a giant conglomerate yet. I’m not rich, and I don’t pretend
+              to be. But I am relentlessly disciplined, technically capable, and willing to work
+              in broad daylight.&rdquo;
+            </blockquote>
+          </section>
+
+          {/* Chapter II */}
+          <section className="autobio-chapter anim-section">
+            <div className="chapter-label anim-slide-up">
+              <span>CHAPTER 02</span>
+              <span className="chapter-label-line" aria-hidden="true" />
+              <span>THE FRACTURED LANDSCAPE</span>
+            </div>
+
+            <h2 className="chapter-heading anim-slide-up">
+              The modern digital world has broken itself into silos.
+            </h2>
+
+            <div className="chapter-prose anim-slide-up">
+              <p>
+                Over the years, watching businesses launch and disintegrate, I saw the modern digital
+                landscape fracture into three dysfunctional corners:
+              </p>
+
+              <div className="autobio-silos-text">
+                <div className="silo-entry">
+                  <span className="silo-entry-name">Designers</span>
+                  <p>
+                    who make things that look gorgeous and win awards, but convert terribly because they
+                    do not understand unit economics or checkout friction.
+                  </p>
                 </div>
-                <div className="arsenal-tags">
-                  {col.items.map((item) => (
-                    <span key={item} className="arsenal-tag">
-                      {item}
-                    </span>
-                  ))}
+
+                <div className="silo-entry">
+                  <span className="silo-entry-name">Engineers</span>
+                  <p>
+                    who write immaculate, architecturally pure software for products that nobody ever finds
+                    because they dismiss audience distribution as beneath them.
+                  </p>
+                </div>
+
+                <div className="silo-entry">
+                  <span className="silo-entry-name">Marketers</span>
+                  <p>
+                    who sell pipe dreams and high-pressure funnels because they lack the technical craft to
+                    actually build or deliver the experience they promised.
+                  </p>
                 </div>
               </div>
-            ))}
-          </div>
-        </section>
 
-        {/* Call to Action Box */}
-        <section className="about-cta-box">
-          <p className="about-eyebrow">05 / DIRECT LINE</p>
-          <h2>Have a real problem that spans multiple disciplines?</h2>
-          <p>
-            I don&apos;t offer generic agency packages or empty corporate buzzwords. I isolate the
-            core bottleneck, form a testable hypothesis, and build the solution that works.
-          </p>
-          <div className="about-cta-actions">
-            <a
-              className="button button-light"
-              href="mailto:hello@srtroney.com?subject=Problem%20Worth%20Solving"
-            >
-              hello@srtroney.com <span>↗</span>
-            </a>
-            <Link className="button button-primary" href="/work">
-              View selected work <span>↗</span>
-            </Link>
-          </div>
-        </section>
+              <p>
+                When a system fails, each silo points at the other. The designer blames the copy.
+                The copywriter blames the dev team. The developer blames the client brief.
+                Meanwhile, the business quietly bleeds out.
+              </p>
+            </div>
+          </section>
+
+          {/* Chapter III */}
+          <section className="autobio-chapter anim-section">
+            <div className="chapter-label anim-slide-up">
+              <span>CHAPTER 03</span>
+              <span className="chapter-label-line" aria-hidden="true" />
+              <span>THE HYBRID OPERATOR</span>
+            </div>
+
+            <h2 className="chapter-heading anim-slide-up">
+              One person across the entire chain.
+            </h2>
+
+            <div className="chapter-prose anim-slide-up">
+              <p>
+                I chose a different path: becoming a <strong>hybrid operator</strong>.
+              </p>
+              <p>
+                Someone who refuses to respect department borders. Someone who can hold the cinema camera,
+                master the color science, architect the Next.js database, hook up the automated webhook
+                pipelines, and write the direct-response copy that moves real human beings.
+              </p>
+              <p>
+                Speed and truth do not come from larger committees or eight-week syncs. They come from
+                compressed feedback loops—where the person observing the constraint is the exact same person
+                engineering the solution.
+              </p>
+            </div>
+          </section>
+
+          {/* Chapter IV */}
+          <section className="autobio-chapter anim-section">
+            <div className="chapter-label anim-slide-up">
+              <span>CHAPTER 04</span>
+              <span className="chapter-label-line" aria-hidden="true" />
+              <span>THE LABORATORY</span>
+            </div>
+
+            <h2 className="chapter-heading anim-slide-up">
+              This website is my scientific journal.
+            </h2>
+
+            <div className="chapter-prose anim-slide-up">
+              <p>
+                I tested and failed at 99% of digital strategies—the retainers that went nowhere,
+                the ad campaigns that burned budget, the bloated templates that slowed down checkout.
+              </p>
+              <p>
+                Failure is not the opposite of progress; it is structured data. I document every experiment
+                in broad daylight so we can discard the 99% of noise and double down on the 1% of durable
+                levers that actually move businesses.
+              </p>
+              <p className="autobio-closing-line">
+                Investigate. Test. Build what survives.
+              </p>
+            </div>
+          </section>
+
+          {/* Colophon Sign-off */}
+          <footer className="autobio-colophon anim-section">
+            <div className="colophon-divider anim-slide-up" aria-hidden="true" />
+            <div className="colophon-text anim-slide-up">
+              <p className="colophon-author">Shohanur Rahman Talukder (SRT Roney)</p>
+              <p className="colophon-location">Savar, Dhaka, Bangladesh · 23.8583° N, 90.2667° E</p>
+              <p className="colophon-meta">Documented continuously in the open.</p>
+            </div>
+          </footer>
+        </article>
       </main>
 
-      {/* 3. SITE FOOTER */}
-      <footer className="site-footer">
+      {/* ── MINIMAL FOOTER ── */}
+      <footer className="autobio-site-footer">
         <span>© 2026 SRT RONEY</span>
-        <span>Investigate. Test. Build what works.</span>
-        <a href="#top">Back to top ↑</a>
+        <Link href="/">Return to journal ↑</Link>
       </footer>
     </div>
   );
